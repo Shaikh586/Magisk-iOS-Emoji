@@ -4,12 +4,11 @@
 #
 ##########################################################################################
 
+MODID=iOS_Emoji
+AUTOMOUNT=true
 SKIPMOUNT=false
-
 PROPFILE=false
-
-POSTFSDATA=false
-
+POSTFSDATA=true
 LATESTARTSERVICE=false
 
 REPLACE_EXAMPLE="
