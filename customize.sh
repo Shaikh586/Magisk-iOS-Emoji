@@ -163,7 +163,7 @@ if package_installed "com.facebook.katana"; then
 fi
 
 ## Check for possible in-app emojis on boot time and change them
-
+#echo 'MODDIR=${0%/*}
 ## Wait until the system has completed booting
 #until [ "$(getprop sys.boot_completed)" = 1 ]; do sleep 1; done
 
@@ -197,18 +197,21 @@ fi
 ## Call the function to update emojis in data directories
 #update_data_emojis
 
-# Disable Google FontsProvider
-pm disable com.google.android.gms/com.google.android.gms.fonts.provider.FontsProvider
+## Disable Google FontsProvider
+#pm disable com.google.android.gms/com.google.android.gms.fonts.provider.FontsProvider
 
-# Verify Android version
-ANDROID_VER=$(getprop ro.build.version.sdk)  # Get the Android SDK version
-# If Android 12+ detected
-if [ "$ANDROID_VER" -ge 31 ]; then  # Check if Android version is 12 or higher
-    ui_print "- Android 12+ Detected" 
-    [ -d "/data/fonts" ] && rm -rf "/data/fonts" && ui_print "- Deleting /data/fonts"  # If directory exists, delete it
-fi
-# Remove unnecessary font files
-rm -rf /data/data/com.google.android.gms/files/fonts/opentype/*ttf  > $MODPATH/service.sh
+
+## Remove unnecessary font files
+#[ -d "/data/fonts" ] && rm -rf "/data/fonts"  # If directory exists, delete it
+#rm -rf /data/data/com.google.android.gms/files/fonts/opentype/*ttf'  > $MODPATH/service.sh
+
+## Verify Android version
+#ANDROID_VER=$(getprop ro.build.version.sdk)  # Get the Android SDK version
+## If Android 12+ detected
+#if [ "$ANDROID_VER" -ge 31 ]; then  # Check if Android version is 12 or higher
+#    ui_print "- Android 12+ Detected" 
+#    [ -d "/data/fonts" ] && rm -rf "/data/fonts" && ui_print "- Deleting /data/fonts"  # If directory exists, delete it
+#fi
 
 # Adding OverlayFS Support
 OVERLAY_IMAGE_EXTRA=0     # number of kb need to be added to overlay.img
