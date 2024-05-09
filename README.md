@@ -64,9 +64,6 @@ v15.4.4
 
 [14.2 new emojis](https://blog.emojipedia.org/ios-14-2-emoji-changelog/)
 
-## Troubleshooting 
-If it doesn't work delete all files under /data/font/files/(Random folder name)
-
 ## Tested on
 - OnesPlus 11 (A14)
 - OnesPlus 8T (A13)
