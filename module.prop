@@ -5,3 +5,4 @@ versionCode=17400
 author=Keinta15
 description=Systemlessly replaces emoji font with iOS 17.4 Emoji
 updateJson=https://raw.githubusercontent.com/Keinta15/Magisk-iOS-Emoji/main/updater.json
+minMagisk=20400
