@@ -162,16 +162,16 @@ if package_installed "com.facebook.katana"; then
     chmod 644 "/data/data/com.facebook.katana/app_ras_blobs/FacebookEmoji.ttf"
 fi
 
-# Script to change possible in-app emojis on boot time
+## Check for possible in-app emojis on boot time and change them
 
-# Wait until the system has completed booting
-until [ "$(getprop sys.boot_completed)" = 1 ]; do sleep 1; done
+## Wait until the system has completed booting
+#until [ "$(getprop sys.boot_completed)" = 1 ]; do sleep 1; done
 
-# Wait until the sdcard is mounted
-until [ -d /sdcard ]; do sleep 1; done
+## Wait until the sdcard is mounted
+#until [ -d /sdcard ]; do sleep 1; done
 
-# Delay for stability
-sleep 1
+## Delay for stability
+#sleep 1
 
 ## Function to update emojis in data directories
 #update_data_emojis() {
